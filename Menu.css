@@ -1,0 +1,46 @@
+:root{
+    background-color: #0D436B;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+h1.Ba{
+    font-family: 'Nunito Sans';
+    color: #ffffff;
+    font-size: 50px;
+    text-align: Center;
+    padding-top: 5%;
+    margin-bottom: -2%;
+}
+
+h2.Ba{
+    font-family: 'Nunito Sans';
+    color: #ffffff;
+    font-size: 30px;
+    text-align: Center;
+    padding: auto;
+    
+}
+
+.flex-container {
+    display: flex;
+    height: 60%;
+    width: 90%;
+    margin: auto;
+    background-color: #00a4bd71;
+}
+
+.Apartado-container{
+    margin: auto;
+}
+
+.btn {
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+    border-radius: 5px; 
+  }
