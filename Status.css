@@ -153,17 +153,16 @@ td.inf {
 }
 
 
-
 td.Reporte {
     text-align: center;
     padding: 1% 100px; /* Espacio igual entre los elementos */
 }
 
+
 p.pp{
     color: #000000;
     font-size: 20px;
     padding-left: 3%;
-    
 }
 p.sp{
     color: #656F77;
