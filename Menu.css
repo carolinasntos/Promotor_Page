@@ -7,21 +7,46 @@
 
 }
 
+  
+.TituloBack {
+    background-color: #ffffffd7;
+    font-size: xx-large;
+    font-family: 'Nunito Sans';
+    border-radius: 80px;  
+   
+    height: 50%;
+    width: 80%;
+    margin: auto;
+    margin-top: -10%;
+    z-index: -1;
+    
+
+    /*Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 h1.Ba{
     font-family: 'Nunito Sans';
-    color: #ffffff;
-    font-size: 50px;
+    color: #0D436B;
+    font-size: 60px;
     text-align: Center;
     padding-top: 5%;
-    margin-bottom: -2%;
+    margin-top: -1%;
+    margin-bottom: -7%;
 }
 
 h2.Ba{
     font-family: 'Nunito Sans';
-    color: #ffffff;
+    color: #0D436B;
     font-size: 30px;
     text-align: Center;
-    padding: auto;
+    margin-top: -4%;
+    
+
+    z-index: 1;
     
 }
 
@@ -60,7 +85,3 @@ td.btn a {
     color: #0f0964;
     
 }
-
-
-  
-  
