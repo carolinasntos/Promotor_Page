@@ -114,4 +114,80 @@ td{
 }
 
 
+.IncidentesInf{
+    display: flex;
+    font-family: 'Nunito Sans';
+    background-color: #e5e6e7;
+    border-radius: 80px;  
+    
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 90%;
+    height: 8%;
+
+    justify-content: center;    
+    align-items: center; 
+    box-shadow: 0 1px 10px #00000080; 
+}
+
+td.inf {
+    text-align: center;
+    padding: 2% 100px; /* Espacio igual entre los elementos */
+}
+
+
+.R1{
+    display: flex;
+    font-family: 'Nunito Sans';
+    background-color: #ffffff;
+    border-radius: 80px;  
+    
+    margin: auto;
+    margin-bottom: 1%;
+    width: 90%;
+
+    justify-content: center;    
+    align-items: center; 
+    border: 1px dashed #000000;
+}
+
+
+
+td.Reporte {
+    text-align: center;
+    padding: 1% 100px; /* Espacio igual entre los elementos */
+}
+
+p.pp{
+    color: #000000;
+    font-size: 20px;
+    padding-left: 3%;
+    
+}
+p.sp{
+    color: #656F77;
+    font-size: 15px;
+    margin-left:-15%;
+}
+.circular{
+    margin-left: -70%;
+}
+
+.TerminarR{
+    background-color: #004f8b;
+    color: #ffffff;
+    font-family: 'Nunito Sans';
+    border-radius: 7px;
+    border: -10px solid black;
+    margin-left: -90%;
+}
+
+button.TerminarR:hover {
+    background-color: #4b93c7;
+    cursor: pointer;
+}
+
+
+
 
