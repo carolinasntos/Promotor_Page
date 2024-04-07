@@ -178,7 +178,7 @@ p.sp{
     color: #ffffff;
     font-family: 'Nunito Sans';
     border-radius: 7px;
-    border: -10px solid black;
+    border: none;
     margin-left: -90%;
 }
 
