@@ -9,7 +9,8 @@
 
   
 .TituloBack {
-    background-color: #ffffffd7;
+    /*background-color: #ffffffd7;*/
+    background-color: rgba(13, 67, 107, 1);
     font-size: xx-large;
     font-family: 'Nunito Sans';
     border-radius: 80px;  
@@ -30,7 +31,8 @@
 
 h1.Ba{
     font-family: 'Nunito Sans';
-    color: #0D436B;
+    /*color: #0D436B;*/
+    color: #ffffff;
     font-size: 60px;
     text-align: Center;
     padding-top: 5%;
@@ -40,7 +42,8 @@ h1.Ba{
 
 h2.Ba{
     font-family: 'Nunito Sans';
-    color: #0D436B;
+    /*color: #0D436B;*/
+    color: #ffffff;
     font-size: 30px;
     text-align: Center;
     margin-top: -4%;
@@ -56,6 +59,7 @@ h2.Ba{
     width: 90%;
     margin: auto;
     background-color: #00a4bd71;
+    background-color: rgba(237, 244, 252, 1);
     border-radius: 40px;
 }
 
@@ -65,7 +69,8 @@ h2.Ba{
 
 
 .btn{
-    background-color: #a9cbdfbe;
+    /*background-color: #a9cbdfbe;*/
+    background-color: rgba(13, 67, 107, 1);
     border-radius: 10%;
 
     text-align: center;
@@ -80,8 +85,15 @@ h2.Ba{
     cursor: pointer;
 }
 
+td.btn a.tbn:hover {
+    text-decoration:none ;
+    color: rgba(13, 67, 107, 1);;
+    
+}
+
 td.btn a {
     text-decoration:none ;
-    color: #0f0964;
+    /*color: #0f0964;*/
+    color: white;
     
 }

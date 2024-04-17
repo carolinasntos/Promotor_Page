@@ -10,7 +10,8 @@ h1.Ba{
     font-family: 'Nunito Sans';
     color: #ffffff;
     font-size: 50px;
-    text-align: Center;
+    /*text-align: Center;*/
+    padding-top: 3%;
 }
 h2.Ba{
     position: relative;
@@ -29,7 +30,7 @@ h2.Ba{
     font-family: 'Nunito Sans';
     border-radius: 80px;  
    
-    height: 40%;
+    height: 35%;
     width: 100%;
     
     z-index: -1; 
@@ -37,9 +38,9 @@ h2.Ba{
     /*Flexbox */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
     position: relative;
-}
+} 
 
 .InfInc{
     display: flex;
