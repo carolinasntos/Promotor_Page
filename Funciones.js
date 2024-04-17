@@ -6,6 +6,39 @@ function cambiarImagen(imagen) {
     imagen.src = imagenes[indice];
 }
 
+function confirmarEnvio() {
+    var form = document.getElementById('Forms');
+    var imagen = document.querySelector('img');
+
+    var mensaje = "";
+    switch (imagenes[indice]) {
+        case "Revisar.png":
+            mensaje = "No has cambiado el Status\n¿Seguro que quieres enviarlo?";
+            break;
+        case "Aceptado.png":
+            mensaje = "Confirmación de 'Aceptado'";
+            break;
+        case "Rechazado.png":
+            mensaje = "Confirmación de 'Rechazado'";
+            break;
+        default:
+            mensaje = "¿Está seguro que desea enviar?";
+    }
+
+    if (confirm(mensaje)) {
+        form.action = "Aprobar.html";
+        form.submit();
+    } else {
+        return false;
+    }
+}
+
+// Agregar el evento 'submit' al formulario para llamar a la función de confirmación
+document.getElementById('Forms').addEventListener('submit', confirmarEnvio);
+
+
+
+
 function notificar(boton) {
     var r1 = boton.closest('.R1'); // Permite obtener el elemento '.R1' que contiene el botón especifico
     var imagen = r1.querySelector('.circular'); // Optenemos la imagen dentro
@@ -31,8 +64,5 @@ function uploadImage(){
 
 document.getElementById("Forms").addEventListener("submit", function(event){
     event.preventDefault();
-    // Aquí podrías realizar cualquier validación de los campos del formulario antes de enviarlo
-
-    // Después de enviar el formulario, redirigir al usuario a otra página
     window.location.href = "Status.html";
 })
