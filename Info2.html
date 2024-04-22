@@ -10,6 +10,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+        <script>
+            window.onload = function() {
+                alert("¡Bienvenido Promotor! \n \nEn esta Pagina deberas Aceptar/Rechazar el reporte realizado por uno de los colaboradores. \nRecuerda asignar los 'Puntos' tomando en consideración la gravedad del incidente reportado.\n \n0 --> Rechazado \n25 --> Prioridad Alta");
+            };
+        </script>
+
     </head>
     <body>
         <div><a href="Aprobar.html" class="btn"><img src="return.png" width="70" height="70"></a></div>
@@ -67,17 +74,35 @@
                     </div>
                 </td>
             </table>
-         
-            <table class="Envio">
+            <div class="Final">
+                <table>
+                    <tr>
+                      <td>Status:</td>
+                      <td><img src="Revisar.png" height="30" onclick="cambiarImagen(this)"></td>
+                      <td>Puntos a Asignar:</td>
+                      <td>
+                        <label>
+                        <select name="PuntosAsignar" class="DiseñoOpc" required>
+                            <option value="" diseabled selected hidden>Selecionar</option>
+                            <option value="1">10</option>
+                            <option value="2">15</option>
+                            <option value="3">20</option>
+                            <option value="4">25</option>
+                        </select>
+                    </label>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table class="Envio">
                     <form id=Forms action="">
-                        <center>
-                            <img src="Revisar.png" height="35" onclick="cambiarImagen(this)">
+                        <center>                      
                             <center><input type="submit"> </center>
                             </div>
                         </center>
-                    </form>
-                </td> 
-            </table>
+                    </form> 
+                </table>
+            </div>
         </div>
         <script src="Funciones.js"></script> 
     

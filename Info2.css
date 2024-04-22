@@ -149,6 +149,37 @@ td.sp{
     margin-bottom: 1.5%;  
 }
 
+.Final {
+    text-align: center; /* Centrar horizontalmente */
+
+  }
+  .Final table {
+    margin: auto; /* Centrar horizontalmente */
+    
+  }
+  .Final td {
+    vertical-align: middle; /* Centrar verticalmente */
+    padding: 8px;
+  }
+  .AsignarP {
+    width: 100%; /* Ajusta el ancho del textarea al 100% del contenedor */
+    height: 30px; /* Ajusta la altura del textarea */
+    font-size: 18px; /* Ajusta el tamaño de la letra */
+    font-family: 'Nunito Sans';
+  }
+  
+.DiseñoOpc{
+    font-family: 'Nunito Sans';
+    padding: 10px; 
+    font-size: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    background-color: #d9d9d933; 
+    
+    width: 100%;
+}
+
+
 .Envio{
     justify-content: center;
     align-items: center;

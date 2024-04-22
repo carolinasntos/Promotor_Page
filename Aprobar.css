@@ -1,7 +1,7 @@
 /*  */
 a.btn{
     position: absolute;
-    top: 16.5%;
+    top: 12%;
     left: 80px; 
     z-index: 1;
 }
@@ -12,6 +12,7 @@ h1.Ba{
     font-size: 50px;
     /*text-align: Center;*/
     padding-top: 3%;
+    margin-top: 1%;
 }
 h2.Ba{
     position: relative;
@@ -29,7 +30,7 @@ h2.Ba{
     font-size: xx-large;
     font-family: 'Nunito Sans';
     border-radius: 80px;  
-    height: 50%;
+    height: 35%;
     width: 101.2%;
     margin-left: -0.6%;
     z-index: -1; 
@@ -52,7 +53,7 @@ h2.Ba{
     font-family: 'Nunito Sans';
     border-radius: 80px;  
 
-    height: 45%;
+    height: 37%;
     width: 50%;
     
     margin: auto;
@@ -62,18 +63,18 @@ h2.Ba{
 
 /* Reportes Total */
 .Ntotal{
-    font-size: 130px;
+    font-size: 90px;
     color: #A42FC1;
     text-align: center;
     font-family:'Nunito Sans',Arial;
-    padding-left: 70%;
-    margin-bottom: -40%;
+    padding-left: 100%;
+    margin-bottom: -80%;
 }
 .NRTotal{
-    font-size: 40px;
+    font-size: 30px;
     color: #A42FC1;
-    padding-left: 80%;
-    margin: 30% 0 -10% 0;
+    padding-left: 85%;
+    margin: 60% 0 -10% 0;
 }
 .tnormal1{
     font-size: 22px;
@@ -88,11 +89,12 @@ h2.Ba{
     font-size: 90px;
     color: #656F77;
     font-family:'Nunito Sans',Arial;
+    margin-bottom: 70%;
 }
 .NPRTotal{
     font-size: 30px;
     color: #656F77;
-    margin-left: -50%;
+    margin-left: -40%;
     margin-top: -35%;
     
 }
@@ -101,7 +103,7 @@ h2.Ba{
     text-align: center;
     font-family:'Nunito Sans',Arial;
     margin-top: -15%;
-    margin-left: -120%;
+    margin-left: -80%;
 }
 
 /* Reportes Aceptados */
@@ -110,20 +112,20 @@ h2.Ba{
     color: #1F8435;
     text-align: center;
     font-family:'Nunito Sans',Arial;
-    margin: -50% 0 0 -90%;
+    margin: -70% 0 0 -20%;
 }
 .NARTotal{
     font-size: 30px;
     color: #1F8435;
-    margin: -40% 0 0 -20%;
+    margin: -40% 0 0 -10%;
     
 }
 .tnormal3{
     font-size: 18px;
     text-align: center;
     font-family:'Nunito Sans',Arial;
-    margin-top: -7%;
-    margin-left: -40%;
+    margin-top: 1%;
+    margin-left: -20%;
 }
 
 

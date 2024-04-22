@@ -1,6 +1,6 @@
 a.btn{
     position: absolute;
-    top: 16.5%;
+    top: 12%;
     left: 80px; 
     z-index: 1;
 }
@@ -10,6 +10,7 @@ h1.Ba{
     color: #ffffff;
     font-size: 50px;
     text-align: Center;
+    margin-top: -0.5%;
 }
 h2.Ba{
     position: relative;
@@ -28,7 +29,7 @@ h2.Ba{
     font-family: 'Nunito Sans';
     border-radius: 80px;  
    
-    height: 40%;
+    height: 32%;
     width: 100%;
     
     z-index: -1; 
