@@ -7,29 +7,32 @@ function cambiarImagen(imagen) {
 }
 
 function confirmarEnvio() {
-    var form = document.getElementById('Forms');
-    var imagen = document.querySelector('img');
+    // Verificar si el título de la página es "Información del Reporte"
+    if (document.title === "Información del Reporte") {
+        var form = document.getElementById('Forms');
+        var imagen = document.querySelector('img');
 
-    var mensaje = "";
-    switch (imagenes[indice]) {
-        case "Revisar.png":
-            mensaje = "No has cambiado el Status\n¿Seguro que quieres enviarlo?";
-            break;
-        case "Aceptado.png":
-            mensaje = "Confirmación de 'Aceptado'";
-            break;
-        case "Rechazado.png":
-            mensaje = "Confirmación de 'Rechazado'";
-            break;
-        default:
-            mensaje = "¿Está seguro que desea enviar?";
-    }
+        var mensaje = "";
+        switch (imagenes[indice]) {
+            case "Revisar.png":
+                mensaje = "No has cambiado el Status\n¿Seguro que quieres enviarlo?";
+                break;
+            case "Aceptado.png":
+                mensaje = "Confirmación de 'Aceptado'";
+                break;
+            case "Rechazado.png":
+                mensaje = "Confirmación de 'Rechazado'";
+                break;
+            default:
+                mensaje = "¿Está seguro que desea enviar?";
+        }
 
-    if (confirm(mensaje)) {
-        form.action = "Aprobar.html";
-        form.submit();
-    } else {
-        return false;
+        if (confirm(mensaje)) {
+            form.action = "Aprobar.html";
+            form.submit();
+        } else {
+            return false;
+        }
     }
 }
 
@@ -47,7 +50,7 @@ function notificar(boton) {
     if (imagen && imagen.src.includes('Revisar.png')) {
         alert('Notificación: \nEste reporte está en revisión. \nPara poder "Terminar" con este Reporte, es necesario revisar la información y cambiar el Status del mismo.');
     } else {
-        window.location.href = 'TerminarReporte.html';  // Redirige a "TerminarReporte"
+        window.location.href = 'TReporte.html';  // Redirige a "TerminarReporte"
     }
 }
 

@@ -1,7 +1,7 @@
 /*  */
 a.btn{
     position: absolute;
-    top: 16.5%;
+    top: 8%;
     left: 80px; 
     z-index: 1;
 }
@@ -11,21 +11,16 @@ h1.Ba{
     color: #ffffff;
     font-size: 50px;
     text-align: Center;
-    margin-top: -1%;
 }
 h2.Ba{
     position: relative;
-    top:-13%;
+    top:-11%;
     font-family: 'Nunito Sans';
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 18px;
     text-align: Center;
  
     
-}
-
-.btn img{
-    margin-top: -70%;
 }
 
 h1.Be{
@@ -33,7 +28,7 @@ h1.Be{
     color: #000000;
     font-size: 30px;
     text-align: Center;
-    margin-top: -2%;
+    margin-top: -4%;
 }
 
 .TituloBack {
@@ -42,8 +37,8 @@ h1.Be{
     font-family: 'Nunito Sans';
     border-radius: 80px;  
    
-    height: 30%;
-    width: 101.5%;
+    height: 25%;
+    width: 100%;
     
     z-index: -1; 
 
@@ -52,8 +47,6 @@ h1.Be{
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: -0.8%;
-    margin-left: -0.8%;
 }
  
 .Formulario form {
@@ -76,13 +69,23 @@ td {
 }
 
 .celdaImagen{
-    background-color: #01060a3a;
-    width: 40%; 
+    background-color: #000000;
+    width: 50%; 
     border-radius: 10%;  
-    height: 40%;
+    
+   
 }
 
+.DiseñoOpc{
+/*    appearance: none;  */
+    padding: 10px; 
+    font-size: 16px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    background-color: #d9d9d933; 
 
+    width: 80%;
+}
 
 .Com{
     width: 80%;
@@ -93,8 +96,6 @@ td.sp{
     font-size: 'Nunito Sans';
     color: #656F77;
     font-size: 18px;
-    width: 25%;
-    height: 1rem;
   
 }
 
@@ -109,7 +110,6 @@ input[type="submit"] {
     display: inline-block; 
     font-size: 20px; 
     margin: 1%;
-    margin-top: 3%;
 
     cursor: pointer;
     border-radius: 10px; 
@@ -121,10 +121,15 @@ input[type="submit"] {
     background-color: #2f6a94;
   }
 
+  #Forms {
+    width: 90%; 
+    height: 50%;
+    margin: auto; 
+    background-color: #ffffff;
+}
 
 
-.InfInc{
-    display: flex;
+.Envio{
     justify-content: center;
     align-items: center;
     position: relative;
@@ -134,46 +139,23 @@ input[type="submit"] {
     font-family: 'Nunito Sans';
     border-radius: 80px;  
 
-    width: 90%; 
-    height: 70%;
-    margin: auto; 
-
-}
-.Cate{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    background-color: #e9f1f8;
-    box-shadow: 0 9px 18px #00000080; 
-
-    font-family: 'Nunito Sans';
-    border-radius: 80px;  
-
     width: 80%; 
-    height: 18%;
-    margin: auto; 
+    height: 100%;
+    margin: auto;     
 }
 
-.Comen{
-    display: flex;
-    font-family: 'Nunito Sans';
-    background-color: #ffffff;
-
-    width: 80%;
-    max-width: 80%;
-    height: 80%;
-    max-width: 80%;
-    margin: auto;
-
-    border: 1px solid #000000;
-    overflow-y: scroll;
-
-}
-
-.Comen p{
-    text-align: justify;
-    padding: 0 10px 0 10px;
+.center-table {
+    margin: 0 auto; /* Centra horizontalmente la tabla */
+    width: 100%; 
+    height: 100%;
     
 }
+
+.celdaImagen{
+    background-color: #01060a3a;
+    width: 50%; 
+    border-radius: 10%;  
+    
+   
+}
+

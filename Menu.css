@@ -55,7 +55,7 @@ h2.Ba{
 
 .flex-container {
     display: flex;
-    height: 60%;
+    height: 70%;
     width: 90%;
     margin: auto;
     background-color: #00a4bd71;
@@ -65,6 +65,9 @@ h2.Ba{
 
 .Apartado-container{
     margin: auto;
+    height: 30%;
+
+
 }
 
 
@@ -78,6 +81,8 @@ h2.Ba{
     font-size: 2rem;
     box-shadow: 0 5px 13px  #002b3f;
     width: 50%;
+    font-size: 1.6rem;
+    
 }
 
 img{
