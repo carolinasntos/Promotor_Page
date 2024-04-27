@@ -1,3 +1,33 @@
+fetch('http://localhost:2000/reportes')
+.then(response => response.json())
+.then(reportes => {
+    reportes.forEach((reporte, index) => {
+        console.log(document.querySelector('.R1')); // Debería mostrarte el elemento, si es `null`, el elemento no existe en el DOM
+    
+        const reporteDiv = document.querySelector(`.R1:nth-child(${index + 2})`);
+        if (!reporteDiv) {
+            console.error(`No se encontró el elemento para el reporte con index: ${index}`);
+            return; // Salta esta iteración si el elemento no se encontró
+        }
+        // Aquí se utilizan los nombres de los atributos de la base de datos
+        reporteDiv.querySelector('.pp').textContent = `Reporte ${reporte.r_id}`;
+        reporteDiv.querySelector('.sp').textContent = reporte.r_fecha;
+        
+        // Determina la imagen a mostrar basándose en el 'estado_reporte'
+        const imagenSrc = reporte.r_status === 0 ? 'Revisar.png' :
+                          reporte.estado_reporte === 'Aceptado' ? 'Aceptado.png' :
+                          'Rechazado.png';
+        reporteDiv.querySelector('.circular').src = imagenSrc;
+
+        // Configura el enlace para revisar el incidente, usando 'id' del reporte
+        reporteDiv.querySelector('.ConocerInfo').onclick = function() {
+            window.location.href = `Info2.html?idReporte=${reporte.r_id}`; // Se utiliza 'id' como parámetro
+        };
+    });
+})
+.catch(error => console.error('Error:', error));
+
+///
 var imagenes = ["Revisar.png", "Aceptado.png", "Rechazado.png"];
 var indice = 0;
 
