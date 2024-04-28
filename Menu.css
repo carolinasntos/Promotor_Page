@@ -10,7 +10,7 @@
   
 .TituloBack {
     /*background-color: #ffffffd7;*/
-    background-color: rgba(13, 67, 107, 1);
+    background-color: #0d436b;
     font-size: xx-large;
     font-family: 'Nunito Sans';
     border-radius: 80px;  
@@ -82,7 +82,6 @@ h2.Ba{
     box-shadow: 0 5px 13px  #002b3f;
     width: 50%;
     font-size: 1.6rem;
-    
 }
 
 img{
