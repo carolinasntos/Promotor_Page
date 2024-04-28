@@ -200,5 +200,10 @@ button.ConocerInfo:hover {
     cursor: pointer;
 }
 
+.reportesContenedor {
+    max-height: 1000px; /* Ajusta esto según la altura deseada */
+    overflow-y: auto;  /* Habilita el scroll vertical */
+}
+
 
 

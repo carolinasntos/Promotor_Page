@@ -30,8 +30,9 @@
                 <tr>
                     <td>
                         <div id="img-view" class="celdaImagen">
-                            <img src="upload.png"> <!-- Dependera de la foto que este en la base de datos-->
+                            <img id="imagenTexto"> <!-- Dependera de la foto que este en la base de datos-->
                         </div>
+                        <!--<div id="imagenTexto"></div>-->
                     </td>
                     <td rowspan="6">
                         <table class="TableAjuste" >
@@ -51,7 +52,7 @@
                             <tr>
                                 <td>
                                     <div class = "Cate"> 
-                                        <p> Producto Fuera de Lugar</p>
+                                        <p id="categoria"> Producto Fuera de Lugar</p>
                                     </div>
                                 </td>
                             </tr>
@@ -67,7 +68,7 @@
                 </tr>
                 <td>
                     <div class = "Comentario"> 
-                        <p> Shoes on, get up in the morn' Cup of milk, let's rock and roll King Kong, 
+                        <p id="descripcion"> Shoes on, get up in the morn' Cup of milk, let's rock and roll King Kong, 
                             kick the drum, rolling on like a Rolling Stone Sing song when I'm walking 
                             home Jump up to the top, LeBron Ding dong, call me on my phone Ice tea and 
                             a game of ping pong, huh</p>
@@ -78,7 +79,7 @@
                 <table>
                     <tr>
                       <td>Status:</td>
-                      <td><img src="Revisar.png" height="30" onclick="cambiarImagen(this)"></td>
+                      <td><img id="status" src="Revisar.png" height="30" onclick="cambiarImagen(this)"></td>
                       <td>Puntos a Asignar:</td>
                       <td>
                         <label>
@@ -104,7 +105,7 @@
                 </table>
             </div>
         </div>
-        <script src="Funciones.js"></script> 
+        <script src="InfoR.js"></script> 
     
     </body>
 </html>

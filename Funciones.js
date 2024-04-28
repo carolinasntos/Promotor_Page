@@ -1,34 +1,95 @@
-fetch('http://localhost:2000/reportes')
-.then(response => response.json())
+fetch('http://localhost:2000/reportes/info')
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Problema al obtener la respuesta del servidor: ' + response.statusText);
+    }
+    if (!response.headers.get('content-type')?.includes('application/json')) {
+        throw new TypeError('La respuesta no es JSON válido: ' + response.statusText);
+    }
+    return response.json();
+})
 .then(reportes => {
-    reportes.forEach((reporte, index) => {
-        console.log(document.querySelector('.R1')); // Debería mostrarte el elemento, si es `null`, el elemento no existe en el DOM
-    
-        const reporteDiv = document.querySelector(`.R1:nth-child(${index + 2})`);
-        if (!reporteDiv) {
-            console.error(`No se encontró el elemento para el reporte con index: ${index}`);
-            return; // Salta esta iteración si el elemento no se encontró
-        }
-        // Aquí se utilizan los nombres de los atributos de la base de datos
-        reporteDiv.querySelector('.pp').textContent = `Reporte ${reporte.r_id}`;
-        reporteDiv.querySelector('.sp').textContent = reporte.r_fecha;
-        
-        // Determina la imagen a mostrar basándose en el 'estado_reporte'
-        const imagenSrc = reporte.r_status === 0 ? 'Revisar.png' :
-                          reporte.estado_reporte === 'Aceptado' ? 'Aceptado.png' :
-                          'Rechazado.png';
-        reporteDiv.querySelector('.circular').src = imagenSrc;
+    // Limpiar el contenedor de reportes existente o crear uno si no existe
+    let reportesContenedor = document.querySelector('.reportesContenedor');
+    if (!reportesContenedor) {
+        reportesContenedor = document.createElement('div');
+        reportesContenedor.className = 'reportesContenedor';
+        document.body.appendChild(reportesContenedor); // O el elemento donde quieras que estén los reportes
+    } else {
+        reportesContenedor.innerHTML = ''; // Limpia el contenedor existente
+    }
 
-        // Configura el enlace para revisar el incidente, usando 'id' del reporte
-        reporteDiv.querySelector('.ConocerInfo').onclick = function() {
-            window.location.href = `Info2.html?idReporte=${reporte.r_id}`; // Se utiliza 'id' como parámetro
+    // Crear los elementos de los reportes y añadirlos al contenedor
+    reportes.forEach(reporte => {
+        const reporteDiv = document.createElement('div');
+        reporteDiv.className = 'R1';
+
+        const table = document.createElement('table');
+        const tr = document.createElement('tr');
+
+        // ID del reporte
+        const idTd = document.createElement('td');
+        idTd.className = 'Reporte';
+        idTd.innerHTML = `<p class="pp"><strong>${reporte.r_id}</strong></p>`;
+        tr.appendChild(idTd);
+
+        // Fecha del reporte
+        const fechaTd = document.createElement('td');
+        fechaTd.className = 'Reporte';
+        fechaTd.innerHTML = `<p class="sp"><strong>${reporte.r_fecha}</strong></p>`;
+        tr.appendChild(fechaTd);
+
+        // Estado del reporte
+        const estadoTd = document.createElement('td');
+        estadoTd.className = 'Reporte';
+        const imagen = document.createElement('img');
+        imagen.className = 'circular';
+        imagen.height = 35;
+        imagen.src = reporte.r_status === 0 ? 'Revisar.png' :
+                      reporte.r_status === 1 ? 'Aceptado.png' :
+                      'Rechazado.png';
+        estadoTd.appendChild(imagen);
+        tr.appendChild(estadoTd);
+
+        // Botón para revisar el reporte
+        const botonTd = document.createElement('td');
+        botonTd.className = 'Reporte';
+        const boton = document.createElement('button');
+        boton.className = 'ConocerInfo';
+        boton.innerHTML = `<p>Revisar Incidente</p>`;
+
+         // Modificar la funcionalidad del botón según el estado del reporte
+        if (reporte.r_status === 1 || reporte.r_status === 2) {  // Suponiendo que 1 y 2 representen "Aceptado" y "Terminado"
+            boton.disabled = true;  // Deshabilitar el botón
+            boton.style.opacity = 0.5;  // Cambiar la opacidad para indicar visualmente que está deshabilitado
+        } else {
+            boton.onclick = function() {
+                window.location.href = `Info2.html?idReporte=${reporte.r_id}`;
+            };
+        }
+
+        botonTd.appendChild(boton);
+        tr.appendChild(botonTd);
+
+
+        boton.onclick = function() {
+            window.location.href = `Info2.html?idReporte=${reporte.r_id}`;
         };
+        botonTd.appendChild(boton);
+        tr.appendChild(botonTd);
+
+        // Añadir fila a la tabla y tabla al div de reporte
+        table.appendChild(tr);
+        reporteDiv.appendChild(table);
+
+        // Añadir el div de reporte al contenedor principal
+        reportesContenedor.appendChild(reporteDiv);
     });
 })
-.catch(error => console.error('Error:', error));
 
+.catch(error => console.error('Error:', error));
 ///
-var imagenes = ["Revisar.png", "Aceptado.png", "Rechazado.png"];
+/*var imagenes = ["Revisar.png", "Aceptado.png", "Rechazado.png"];
 var indice = 0;
 
 function cambiarImagen(imagen) {
@@ -65,7 +126,7 @@ function confirmarEnvio() {
         }
     }
 }
-
+*/
 // Agregar el evento 'submit' al formulario para llamar a la función de confirmación
 document.getElementById('Forms').addEventListener('submit', confirmarEnvio);
 
