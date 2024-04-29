@@ -12,7 +12,7 @@ body {
   .login-box {
     font-family: Nunito Sans;
     width: 25%;
-    height: 70%;
+    height: 80%;
     background: #ffffffef;
     color: #000000;
     top: 50%;
@@ -54,11 +54,21 @@ body {
     margin-bottom: 20px;
   }
   
-  .login-box input[type="text"], .login-box input[type="password"] {
+  .login-box input[type="text"], .login-box input[type="password"]  {
     border: none;
     border-bottom: 1px solid #000000;
     background: transparent;
-    /*outline: none;*/
+    outline: none;
+    height: 40px;
+    color: #1b1a1a;
+    font-size: 16px;
+  }
+
+  .login-box input[type="email"]  {
+    border: none;
+    border-bottom: 1px solid #000000;
+    background: transparent;
+    outline: none;
     height: 40px;
     color: #1b1a1a;
     font-size: 16px;
@@ -94,4 +104,3 @@ body {
   .login-box a:hover {
     color: #1e71b1;
   }
-  
