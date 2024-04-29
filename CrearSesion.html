@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <!--Se declara los valores meta de la página, en este caso siendo el tipo de entrada-->
+        <meta charset="utf-8">
+        <meta name="Whireport" content="Software privado para Whirlpool" lang="es">
+        <title>Crear Sesión</title>
+        <link rel="stylesheet" href="CrearSesion.css">
+        <!-- Se carga la API de google fonts y luego se cargan las fuentes oficiales del socio formador-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="login-box">
+            <h1>Crear Cuenta</h1>
+            <p id="p1"></p>
+            <!--<form action="" method="post">-->
+                <label for="NombreCompleto">Nombre:</label>
+                <input type="text" id="NombreCompleto" name="NombreCompleto" required placeholder="Ingresar Nombre Completo">
+                
+                <label for="IdEmpleado">ID de Empleado:</label>
+                <input type="text" id="IdEmpleado" name="IdEmpleado" required placeholder="Ingresar ID de Empleado">
+                
+                <label for="email">Email de empleado:</label>
+                <input id="email" type="email"name="email" required placeholder="Ingresar Correo">
+
+                <label for="password">Contraseña:</label>
+                <input id="pass" type="password" name="password" required placeholder="Ingresar Contraseña">
+                
+                <!--<input type="submit" value="Crear Cuenta">-->
+                <input id = "btn1" type="button" onclick="start()" value = "SignUp">
+                <br>       
+                <center><a href="IniciarSesion.html"><em>Ya tengo cuenta en WhirlReport.</em></a></center>
+          </div>  
+    <script>
+      // Start function
+      const start = async function() {
+                const url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBT7cdhS5BC5A4klorudSSjkJG_dvHSnYU';
+                const data ='{"email":"'+document.getElementById("email").value+'","password":"'+document.getElementById("pass").value+'","returnSecureToken":true}';
+                const resp = await fetch(url, {
+                        method: 'POST',
+                        headers: {
+                        'Content-Type': 'application/json',
+                        },
+                        body: data,
+                });
+                const json = await resp.json();  // Directly parse JSON from the response
+
+                if (resp.ok && json.registered) {
+                        document.getElementById('p1').innerText='Sesión Iniciada';
+                        window.location.href = 'Menu.html'; // Redirect to the Main page
+                } else {
+                    // Check if the email already exists
+                    if (json.error && json.error.message === "EMAIL_EXISTS") {
+                    document.getElementById('p1').innerText = 'El correo ya ha sido registrado.';
+                    } else {
+                    document.getElementById('p1').innerText = 'Error al crear la cuenta, hay campos faltantes por llenar.';
+                    }
+                }
+      };
+    </script>    
+    </body>
+</html>
