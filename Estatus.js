@@ -158,5 +158,5 @@ function uploadImage(){
 
 document.getElementById("Forms").addEventListener("submit", function(event){
     event.preventDefault();
-    window.location.href = "Status.html";
+    window.location.href = "Status.html?";
 })
