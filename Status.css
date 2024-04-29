@@ -14,7 +14,7 @@ h1.Ba{
 }
 h2.Ba{
     position: relative;
-    top:-18%;
+    top:-15%;
     font-family: 'Nunito Sans';
     color: #ffffff;
     font-size: 20px;
@@ -29,7 +29,7 @@ h2.Ba{
     font-family: 'Nunito Sans';
     border-radius: 80px;  
    
-    height: 32%;
+    height: 30%;
     width: 100%;
     
     z-index: -1; 
@@ -39,6 +39,9 @@ h2.Ba{
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: -1%;
+    margin-left: -1%;
+    padding-right: 2%;
 }
 
 .InfInc{
@@ -122,7 +125,7 @@ td{
     border-radius: 80px;  
     
     margin: auto;
-    margin-top: 3%;
+    margin-top: -3%;
     margin-bottom: 2%;
     width: 90%;
     height: 8%;
