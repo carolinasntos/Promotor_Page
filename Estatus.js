@@ -1,4 +1,3 @@
-if (window.location.pathname === '/Colaborador_Page/Status.html') {
     fetch('http://localhost:2000/reportes/infoA')
     .then(response => {
         if (!response.ok) {
@@ -89,7 +88,7 @@ if (window.location.pathname === '/Colaborador_Page/Status.html') {
     })
 
     .catch(error => console.error('Error:', error));
-}
+
 ///
 /*var imagenes = ["Revisar.png", "Aceptado.png", "Rechazado.png"];
 var indice = 0;

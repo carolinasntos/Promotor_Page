@@ -200,7 +200,7 @@ function enviarEstadoAlServidor(idReporte, estadoNumerico) {
     });
 }*/
 
-function confirmarEnvio() {
+/*function confirmarEnvio() {
     // Verificar si el título de la página es "Información del Reporte"
     if (document.title === "Información del Reporte") {
         var form = document.getElementById('Forms');
@@ -228,7 +228,7 @@ function confirmarEnvio() {
             return false;
         }
     }
-}
+}*/
 
 // Agregar el evento 'submit' al formulario para llamar a la función de confirmación
-document.getElementById('Forms').addEventListener('submit', confirmarEnvio);
+document.getElementById('Forms').addEventListener('submit');
