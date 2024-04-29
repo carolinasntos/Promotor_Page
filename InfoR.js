@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     cambiarImagen(this, this.dataset.idReporte);
                 };
 
-                imgStatus.src = reporte.estado === 'Revisar' ? 'Revisar.png' :
-                                reporte.estado === 'Aceptado' ? 'Aceptado.png' :
+                imgStatus.src = reporte.estado === 0 ? 'Revisar.png' :
+                                reporte.estado === 1 ? 'Aceptado.png' :
                                 'Rechazado.png';
             } else {
                 console.error('Elemento .status-img no encontrado en el DOM');
