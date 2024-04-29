@@ -1,4 +1,4 @@
-if (window.location.pathname === '/Promotor_Page/Status.html') {
+if (window.location.pathname === '/Promotor_Page/Aprobar.html') {
 
     fetch('http://localhost:2000/reportes/info')
     .then(response => {
